@@ -1373,10 +1373,22 @@
                 </style>
             </head>
             <body>
-                <!-- Loading Screen -->
+
                 <div class="loading-screen" id="loadingScreen">
-                    <div class="loader"></div>
+                    <div class="loader">
+                        <div class="loader-circle"></div>
+                        <div class="loader-circle"></div>
+                        <div class="loader-circle"></div>
+                    </div>
+                    <div class="loading-text">Loading...</div>
+                    <div class="progress-bar">
+                        <div class="progress" id="progressBar"></div>
+                    </div>
                 </div>
+                <!-- Loading Screen -->
+                <!--<div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>-->
                 <!-- Navigation -->
                 <nav class="navbar">
                     <div class="lang-toggle">
@@ -1627,11 +1639,11 @@
                                             حلول متقدمة في الذكاء الاصطناعي تشمل تعلم الآلةوالتكامل مع الذكاء الاصطناعي
 
                                         </p>
-                                        
+
                                     </div>
                                 </div>
 
-                              
+
 
 
                                 <!-- Skill Card 4 -->
@@ -1646,11 +1658,11 @@
                                            data-ar="تطبيقات متنقلة متعددة المنصات باستخدام Java,.NET,IOS,Android,React">
                                             تطبيقات الويب والموبايل باستخدام Java,.NET,IOS,Android,React
                                         </p>
-                                       
+
                                     </div>
                                 </div>
 
-                               
+
 
                                 <!-- Skill Card 6 -->
                                 <div class="skill-card">
@@ -1664,7 +1676,7 @@
                                            data-ar="استراتيجيات تحول رقمي متكاملة">
                                             استراتيجيات تحول رقمي متكاملة
                                         </p>
-                                       
+
                                     </div>
                                 </div>
                             </div>
@@ -1853,7 +1865,7 @@
                                             <h3 data-en="Our Address" data-ar="عنواننا">عنواننا</h3>
                                             <p data-en="Ramallah,Palestine"
                                                data-ar=" رام الله ، فلسطين">
-                                              رام الله، فلسطين
+                                                رام الله، فلسطين
                                             </p>
                                         </div>
                                     </div>
@@ -1897,7 +1909,7 @@
                 <!-- Projects Section -->
                 <!-- Projects Section -->
                 <!--<section id="projects" class="projects-section">
-        <div class="container">-->
+    <div class="container">-->
                 <!-- Project 1 - OpTube -->
                 <!--<div class="project-card fade-in-left">
         <div class="project-info">
@@ -2131,31 +2143,31 @@
                 <!--<div class="contact-content-horizontal">-->
                 <!-- Contact Info -->
                 <!--<div class="contact-info-horizontal">
-        <div class="info-row">
-            <div class="info-card-horizontal">
-                <div class="info-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="info-content">
-                    <h3 data-en="Our Address" data-ar="عنواننا">عنواننا</h3>
-                    <p data-en="123 Business Center, Riyadh, Saudi Arabia"
-                       data-ar="123 مركز الأعمال، الرياض، المملكة العربية السعودية">
-                        123 مركز الأعمال، الرياض، المملكة العربية السعودية
-                    </p>
-                </div>
+    <div class="info-row">
+        <div class="info-card-horizontal">
+            <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
             </div>
+            <div class="info-content">
+                <h3 data-en="Our Address" data-ar="عنواننا">عنواننا</h3>
+                <p data-en="123 Business Center, Riyadh, Saudi Arabia"
+                   data-ar="123 مركز الأعمال، الرياض، المملكة العربية السعودية">
+                    123 مركز الأعمال، الرياض، المملكة العربية السعودية
+                </p>
+            </div>
+        </div>
 
-            <div class="info-card-horizontal">
-                <div class="info-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="info-content">
-                    <h3 data-en="Email Us" data-ar="البريد الإلكتروني">البريد الإلكتروني</h3>
-                    <p>info@aexeron.com</p>
-                    <p>support@aexeron.com</p>
-                </div>
+        <div class="info-card-horizontal">
+            <div class="info-icon">
+                <i class="fas fa-envelope"></i>
             </div>
-        </div>-->
+            <div class="info-content">
+                <h3 data-en="Email Us" data-ar="البريد الإلكتروني">البريد الإلكتروني</h3>
+                <p>info@aexeron.com</p>
+                <p>support@aexeron.com</p>
+            </div>
+        </div>
+    </div>-->
                 <!-- Social Media -->
                 <!--<div class="info-row social-media-row">
                         <div class="social-media-card">
@@ -2290,7 +2302,25 @@
                     });
 
                     // Initialize lightGallery for project galleries
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const loadingScreen = document.getElementById('loadingScreen');
+                        const pageContent = document.getElementById('pageContent');
+                        const progressBar = document.getElementById('progressBar');
 
+                        // Start the progress bar animation
+                        progressBar.style.width = '100%';
+
+                        // Hide loading screen and show content after 3 seconds
+                        setTimeout(function () {
+                            loadingScreen.classList.add('hidden');
+                            pageContent.classList.add('visible');
+
+                            // Remove loading screen from DOM after transition completes
+                            setTimeout(function () {
+                                loadingScreen.style.display = 'none';
+                            }, 500); // Match this with the transition duration
+                        }, 3000); // 3 seconds
+                    });
                 </script>
             </body>
         </html>
