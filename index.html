@@ -1,0 +1,2296 @@
+﻿<!DOCTYPE html>
+            <html lang="ar" dir="rtl">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Aexeron | حلول الذكاء الاصطناعي والتحول الرقمي</title>
+                <link href="css/style.css" rel="stylesheet" />
+
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+                <style>
+                    /* Loading Animation */
+                  /*  .loading-screen {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(135deg, #1B263B 0%, #3a7bd5 100%);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 9999;
+                        transition: opacity 0.8s ease, visibility 0.8s ease;
+                    }
+
+                        .loading-screen.hidden {
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+
+                    .loader {
+                        position: relative;
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                        .loader::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: 4px solid rgba(255, 255, 255, 0.2);
+                            border-top: 4px solid #00d2ff;
+                            border-radius: 50%;
+                            animation: spin 1s linear infinite;
+                        }*/
+
+                        /*.loader::after {
+                            content: 'Aexeron';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            color: white;
+                            font-weight: bold;
+                            font-size: 12px;
+                            letter-spacing: 1px;
+                        }*/
+/*
+                    @keyframes spin {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }*/
+
+                    /* Fade In Animations */
+                    .fade-in {
+                        opacity: 0;
+                        transform: translateY(30px);
+                        transition: all 0.8s ease;
+                    }
+
+                        .fade-in.visible {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+
+                    .fade-in-left {
+                        opacity: 0;
+                        transform: translateX(-50px);
+                        transition: all 0.8s ease;
+                    }
+
+                        .fade-in-left.visible {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+
+                    .fade-in-right {
+                        opacity: 0;
+                        transform: translateX(50px);
+                        transition: all 0.8s ease;
+                    }
+
+                        .fade-in-right.visible {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+
+                    .fade-in-up {
+                        opacity: 0;
+                        transform: translateY(50px);
+                        transition: all 0.8s ease;
+                    }
+
+                        .fade-in-up.visible {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+
+                    /* Stagger Animation */
+                    .stagger-animation > * {
+                        opacity: 0;
+                        transform: translateY(30px);
+                        transition: all 0.6s ease;
+                    }
+
+                    .stagger-animation.visible > *:nth-child(1) {
+                        transition-delay: 0.1s;
+                    }
+
+                    .stagger-animation.visible > *:nth-child(2) {
+                        transition-delay: 0.2s;
+                    }
+
+                    .stagger-animation.visible > *:nth-child(3) {
+                        transition-delay: 0.3s;
+                    }
+
+                    .stagger-animation.visible > *:nth-child(4) {
+                        transition-delay: 0.4s;
+                    }
+
+                    .stagger-animation.visible > *:nth-child(5) {
+                        transition-delay: 0.5s;
+                    }
+
+                    .stagger-animation.visible > *:nth-child(6) {
+                        transition-delay: 0.6s;
+                    }
+
+                    .stagger-animation.visible > * {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+
+                    /* Scale Animation for Cards */
+                    .scale-in {
+                        opacity: 0;
+                        transform: scale(0.8);
+                        transition: all 0.6s ease;
+                    }
+
+                        .scale-in.visible {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+
+                    /* Professional Enhancements */
+                    .professional-gradient {
+                        /*background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+                    }
+
+                    .glass-effect {
+                        background: rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        border: 1px solid rgba(255, 255, 255, 0.2);
+                    }
+
+                    .shadow-premium {
+                        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+                    }
+
+                    .gradient-text {
+                       /* background: linear-gradient(135deg, #3a7bd5, #00d2ff);*/
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                    }
+
+                    /* Floating Animation */
+                    @keyframes floating {
+                        0%, 100% {
+                            transform: translateY(0px);
+                        }
+
+                        50% {
+                            transform: translateY(-10px);
+                        }
+                    }
+
+                    .floating {
+                        animation: floating 3s ease-in-out infinite;
+                    }
+
+                    /* Pulse Animation for CTA */
+                    @keyframes pulse {
+                        0% {
+                            box-shadow: 0 0 0 0 rgba(58, 123, 213, 0.7);
+                        }
+
+                        70% {
+                            box-shadow: 0 0 0 10px rgba(58, 123, 213, 0);
+                        }
+
+                        100% {
+                            box-shadow: 0 0 0 0 rgba(58, 123, 213, 0);
+                        }
+                    }
+
+                    .btn-pulse {
+                        animation: pulse 2s infinite;
+                    }
+
+                    /* Reset and Base Styles */
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+
+                    body {
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        line-height: 1.6;
+                        color: #333;
+                        overflow-x: hidden;
+                    }
+
+                    [dir="rtl"] body {
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Arial', sans-serif;
+                    }
+
+                    .container {
+                        width: 100%;
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 0 15px;
+                    }
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+
+                    ul {
+                        list-style: none;
+                    }
+
+                    /* Navbar Styles */
+                    .navbar {
+                        height: 70px;
+                        background: rgba(27, 38, 59, 0.95);
+                        backdrop-filter: blur(10px);
+                        position: fixed;
+                        width: 100%;
+                        top: 0;
+                        z-index: 1000;
+                        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                    }
+
+                    .nav-container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        height: 100%;
+                        padding: 0 20px;
+                    }
+
+                    .logo-container {
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .logo img {
+                        height: 40px;
+                        transition: all 0.3s ease;
+                    }
+
+                        .logo img:hover {
+                            opacity: 0.9;
+                        }
+
+                    .nav-links {
+                        display: flex;
+                        align-items: center;
+                        transition: all 0.5s ease;
+                    }
+
+                    /* Fixed: English (LTR) - Menu on the right */
+                    [dir="ltr"] .nav-links {
+                        margin-left: auto;
+                    }
+
+                    /* Fixed: Arabic (RTL) - Menu on the left */
+                    [dir="rtl"] .nav-links {
+                        margin-right: auto;
+                    }
+
+                    .nav-links li {
+                        margin: 0 10px;
+                    }
+
+                    .nav-links a {
+                        color: white;
+                        padding: 10px 15px;
+                        font-weight: 500;
+                        transition: all 0.3s ease;
+                        border-radius: 4px;
+                    }
+
+                        .nav-links a:hover {
+                            background: rgba(255, 255, 255, 0.1);
+                        }
+
+                    .hamburger {
+                        display: none;
+                        cursor: pointer;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        width: 30px;
+                        height: 21px;
+                        z-index: 1001;
+                    }
+
+                        .hamburger span {
+                            display: block;
+                            width: 100%;
+                            height: 3px;
+                            background: white;
+                            transition: all 0.3s ease;
+                        }
+
+                        .hamburger.active span:nth-child(1) {
+                            transform: translateY(9px) rotate(45deg);
+                        }
+
+                        .hamburger.active span:nth-child(2) {
+                            opacity: 0;
+                        }
+
+                        .hamburger.active span:nth-child(3) {
+                            transform: translateY(-9px) rotate(-45deg);
+                        }
+
+                    /* Language Toggle */
+                    .lang-toggle {
+                        position: absolute;
+                        top: 20px;
+                        z-index: 1002;
+                    }
+
+                    /* Fixed: Language toggle positioning */
+                    [dir="ltr"] .lang-toggle {
+                        left: 20px;
+                    }
+
+                    [dir="rtl"] .lang-toggle {
+                        right: 20px;
+                    }
+
+                    #langSwitch {
+                        background: #3a7bd5;
+                        color: white;
+                        border: none;
+                        padding: 5px 10px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        font-weight: 500;
+                        transition: all 0.3s ease;
+                    }
+
+                        #langSwitch:hover {
+                            background: #2c5fb3;
+                        }
+
+                    /* Hero Section */
+                    .hero {
+                        background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(58, 123, 213, 0) 50%, rgb(145, 185, 23, 0.15) 100%);
+                        background-size: 400% 400%;
+                        animation: gradientShift 8s ease infinite;
+                        color: white;
+                        padding: 150px 0 100px;
+                        text-align: center;
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                        .hero::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="rgba(255,255,255,0.1)"><polygon points="0,0 1000,0 1000,100 0,20"/></svg>');
+                            background-size: cover;
+                        }
+
+                    @keyframes gradientShift {
+                        0% {
+                            background-position: 0% 50%;
+                        }
+
+                        50% {
+                            background-position: 100% 50%;
+                        }
+
+                        100% {
+                            background-position: 0% 50%;
+                        }
+                    }
+
+                    .hero-content {
+                        max-width: 800px;
+                        margin: 0 auto;
+                        padding: 0 20px;
+                        position: relative;
+                        z-index: 2;
+                    }
+
+                    .hero h1 {
+                        font-size: 3rem;
+                        margin-bottom: 20px;
+                        line-height: 1.2;
+                        font-weight: 700;
+                        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                    }
+
+                    .hero p {
+                        font-size: 1.3rem;
+                        margin-bottom: 40px;
+                        opacity: 0.95;
+                        line-height: 1.6;
+                        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                    }
+
+                    .btn {
+                        display: inline-block;
+                        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+                        color: #3a7bd5;
+                        padding: 15px 35px;
+                        border-radius: 50px;
+                        font-weight: 600;
+                        font-size: 1.1rem;
+                        transition: all 0.4s ease;
+                        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+                        border: none;
+                        cursor: pointer;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                    }
+
+                        .btn:hover {
+                            transform: translateY(-3px) scale(1.05);
+                            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+                            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+                        }
+
+                    /* Sections */
+                    section {
+                        padding: 80px 0;
+                    }
+
+                    .section-title {
+                        text-align: center;
+                        margin-bottom: 50px;
+                        font-size: 2rem;
+                        color: #2c3e50;
+                        position: relative;
+                    }
+
+                        .section-title::after {
+                            content: '';
+                            position: absolute;
+                            bottom: -15px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 80px;
+                            height: 3px;
+                            background: #3a7bd5;
+                        }
+
+                    [dir="rtl"] .section-title::after {
+                        left: auto;
+                        right: 50%;
+                        transform: translateX(50%);
+                    }
+
+                    /* Mobile Menu Styles - Fixed */
+                    @media (max-width: 992px) {
+                        .nav-links {
+                            position: fixed;
+                            top: 70px;
+                            width: 100%;
+                            height: calc(100vh - 70px);
+                            background: #1B263B;
+                            flex-direction: column;
+                            align-items: center;
+                            padding-top: 40px;
+                            transition: all 0.5s ease;
+                        }
+
+                        /* Fixed: Mobile menu positioning for LTR */
+                        [dir="ltr"] .nav-links {
+                            left: -100%;
+                        }
+
+                            [dir="ltr"] .nav-links.active {
+                                left: 0;
+                            }
+
+                        /* Fixed: Mobile menu positioning for RTL */
+                        [dir="rtl"] .nav-links {
+                            right: -100%;
+                        }
+
+                            [dir="rtl"] .nav-links.active {
+                                right: 0;
+                            }
+
+                        .nav-links li {
+                            margin: 15px 0;
+                        }
+
+                        .hamburger {
+                            display: flex;
+                        }
+
+                        .hero h1 {
+                            font-size: 2rem;
+                        }
+
+                        .hero p {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .hero {
+                            padding: 120px 0 80px;
+                        }
+
+                        section {
+                            padding: 60px 0;
+                        }
+
+                        .section-title {
+                            font-size: 1.8rem;
+                            margin-bottom: 40px;
+                        }
+                    }
+
+                    @media (max-width: 576px) {
+                        .hero {
+                            padding: 100px 0 60px;
+                        }
+
+                            .hero h1 {
+                                font-size: 1.8rem;
+                            }
+
+                        .btn {
+                            padding: 10px 25px;
+                        }
+
+                        .lang-toggle {
+                            top: 15px;
+                        }
+
+                        [dir="ltr"] .lang-toggle {
+                            left: 15px;
+                        }
+
+                        [dir="rtl"] .lang-toggle {
+                            right: 15px;
+                        }
+                    }
+
+                    /* Projects Section Specific Styles */
+                    .projects-section {
+                        padding: 60px 0;
+                    }
+
+                    .project-card {
+                        display: flex;
+                        flex-direction: column;
+                      /*  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);*/
+                        border-radius: 25px;
+                        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+                        overflow: hidden;
+                        margin-bottom: 80px;
+                        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                        border: 1px solid rgba(255, 255, 255, 0.8);
+                        position: relative;
+                    }
+
+                      /*  .project-card::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            height: 4px;
+                            background: linear-gradient(90deg, #3a7bd5, #00d2ff, #764ba2);
+                            background-size: 200% 100%;
+                            animation: shimmer 3s linear infinite;
+                        }
+*/
+                    @keyframes shimmer {
+                        0% {
+                            background-position: -200% 0;
+                        }
+
+                        100% {
+                            background-position: 200% 0;
+                        }
+                    }
+
+                    .project-card:hover {
+                        transform: translateY(-10px) scale(1.01);
+                        box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+                    }
+
+                    .project-info {
+                        padding: 50px 40px;
+                        position: relative;
+                    }
+
+                        .project-info h2 {
+                            font-size: 2rem;
+                            font-weight: 700;
+                            margin-bottom: 20px;
+                            background: linear-gradient(135deg, #2c3e50, #3a7bd5);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                        }
+
+                    .project-meta {
+                        display: flex;
+                        gap: 15px;
+                        margin: 15px 0 25px;
+                        flex-wrap: wrap;
+                    }
+
+                        .project-meta span {
+                            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+                            padding: 8px 20px;
+                            border-radius: 25px;
+                            font-size: 0.9rem;
+                            color: #3a7bd5;
+                            font-weight: 600;
+                            border: 1px solid rgba(58, 123, 213, 0.2);
+                        }
+
+                    .project-features {
+                        margin-top: 30px;
+                    }
+
+                        .project-features h3 {
+                            font-size: 1.3rem;
+                            margin-bottom: 20px;
+                            color: #2c3e50;
+                            position: relative;
+                            padding-bottom: 10px;
+                        }
+
+                            .project-features h3::after {
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                width: 50px;
+                                height: 3px;
+                                background: #3a7bd5;
+                            }
+
+                    [dir="ltr"] .project-features h3::after {
+                        right: auto;
+                        left: 0;
+                    }
+
+                    .feature-list {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                        .feature-list li {
+                            position: relative;
+                            padding: 12px 0 12px 35px;
+                            margin-bottom: 8px;
+                            line-height: 1.5;
+                            border-bottom: 1px solid #f5f5f5;
+                        }
+
+                            .feature-list li:last-child {
+                                border-bottom: none;
+                            }
+
+                            .feature-list li::before {
+                                content: "→";
+                                position: absolute;
+                                left: 0;
+                                color: #3a7bd5;
+                                font-weight: bold;
+                                transition: transform 0.3s ease;
+                            }
+
+                    [dir="rtl"] .feature-list li {
+                        padding: 12px 35px 12px 0;
+                    }
+
+                        [dir="rtl"] .feature-list li::before {
+                            left: auto;
+                            right: 0;
+                            content: "←";
+                        }
+
+                    .feature-list li:hover::before {
+                        transform: translateX(5px);
+                    }
+
+                    [dir="rtl"] .feature-list li:hover::before {
+                        transform: translateX(-5px);
+                    }
+
+                    .project-gallery {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 15px;
+                        padding: 15px;
+                        background: #f9fafc;
+                    }
+
+                    .gallery-item {
+                        border-radius: 8px;
+                        overflow: hidden;
+                        transition: transform 0.3s ease;
+                        height: 200px;
+                    }
+
+                        .gallery-item img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: transform 0.5s ease;
+                        }
+
+                        .gallery-item:hover {
+                            transform: translateY(-5px);
+                        }
+
+                            .gallery-item:hover img {
+                                transform: scale(1.05);
+                            }
+
+                    /* Projects Hero */
+                    .projects-hero {
+                        padding: 120px 0 60px;
+                        background: linear-gradient(135deg, #f8fafc 0%, #e9f0f7 100%);
+                        text-align: center;
+                        border-bottom: 1px solid rgba(0,0,0,0.05);
+                    }
+
+                        .projects-hero .hero-content {
+                            max-width: 800px;
+                            margin: 0 auto;
+                        }
+
+                        .projects-hero h1 {
+                            font-size: 2.5rem;
+                            font-weight: 700;
+                            color: #2c3e50;
+                            margin-bottom: 15px;
+                            line-height: 1.3;
+                        }
+
+                        .projects-hero .subtitle {
+                            font-size: 1.1rem;
+                            color: #5a6a7d;
+                            margin-bottom: 0;
+                            font-weight: 400;
+                            line-height: 1.6;
+                        }
+
+                    /* Responsive adjustments for projects */
+                    @media (min-width: 992px) {
+                        .project-card {
+                            flex-direction: row;
+                        }
+
+                        .project-info {
+                            flex: 1;
+                            padding: 40px;
+                        }
+
+                        .project-gallery {
+                            flex: 1;
+                            padding: 20px;
+                        }
+                    }
+
+                    @media (max-width: 768px) {
+                        .project-features h3 {
+                            font-size: 1.2rem;
+                        }
+
+                        .feature-list li {
+                            padding: 10px 0 10px 25px;
+                            font-size: 0.95rem;
+                        }
+
+                        [dir="rtl"] .feature-list li {
+                            padding: 10px 25px 10px 0;
+                        }
+
+                        .gallery-item {
+                            height: 150px;
+                        }
+
+                        .projects-hero {
+                            padding: 100px 0 50px;
+                        }
+
+                            .projects-hero h1 {
+                                font-size: 2rem;
+                            }
+
+                            .projects-hero .subtitle {
+                                font-size: 1rem;
+                            }
+                    }
+
+                    @media (max-width: 576px) {
+                        .project-gallery {
+                            grid-template-columns: 1fr;
+                        }
+
+                        .project-info {
+                            padding: 25px;
+                        }
+
+                        .feature-list li::before {
+                            font-size: 1rem;
+                        }
+
+                        .projects-hero {
+                            padding: 80px 0 40px;
+                        }
+
+                            .projects-hero h1 {
+                                font-size: 1.7rem;
+                            }
+                    }
+
+                    /* Contact Section */
+                    .contact-section-combined {
+                        padding: 80px 0;
+                        background: linear-gradient(135deg, #f8fafc 0%, #e9f0f7 100%);
+                    }
+
+                    .cta-content {
+                        text-align: center;
+                        margin-bottom: 60px;
+                    }
+
+                        .cta-content h2 {
+                            font-size: 2rem;
+                            color: #2c3e50;
+                            margin-bottom: 20px;
+                        }
+
+                        .cta-content p {
+                            font-size: 1.2rem;
+                            color: #5a6a7d;
+                            max-width: 700px;
+                            margin: 0 auto;
+                        }
+
+                    .contact-content-horizontal {
+                        max-width: 1000px;
+                        margin: 0 auto;
+                    }
+
+                    .info-row {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        gap: 30px;
+                        margin-bottom: 40px;
+                    }
+
+                    .info-card-horizontal {
+                        display: flex;
+                        align-items: center;
+                        background: white;
+                        padding: 25px;
+                        border-radius: 10px;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                        width: 100%;
+                        max-width: 400px;
+                    }
+
+                    .info-icon {
+                        font-size: 1.8rem;
+                        color: #3a7bd5;
+                        margin-right: 20px;
+                    }
+
+                    [dir="rtl"] .info-icon {
+                        margin-right: 0;
+                        margin-left: 20px;
+                    }
+
+                    .info-content h3 {
+                        color: #2c3e50;
+                        margin-bottom: 10px;
+                    }
+
+                    .info-content p {
+                        color: #5a6a7d;
+                    }
+
+                    .social-media-row {
+                        justify-content: center;
+                    }
+
+                    .social-media-card {
+                        background: white;
+                        padding: 30px;
+                        border-radius: 10px;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                        text-align: center;
+                        width: 100%;
+                        max-width: 500px;
+                    }
+
+                        .social-media-card h3 {
+                            color: #2c3e50;
+                            margin-bottom: 20px;
+                        }
+
+                    .social-links {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                    }
+
+                        .social-links a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 50px;
+                            height: 50px;
+                            background: #f5f7fa;
+                            border-radius: 50%;
+                            color: #3a7bd5;
+                            font-size: 1.5rem;
+                            transition: all 0.3s ease;
+                        }
+
+                            .social-links a:hover {
+                                background: #3a7bd5;
+                                color: white;
+                                transform: translateY(-5px);
+                            }
+
+                    /* Footer */
+                    footer {
+                        background: #1B263B;
+                        color: white;
+                        padding: 60px 0 0;
+                    }
+
+                    .footer-content {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                        gap: 40px;
+                        margin-bottom: 40px;
+                    }
+
+                    .footer-logo img {
+                        height: 50px;
+                        margin-bottom: 20px;
+                    }
+
+                    .footer-logo p {
+                        color: rgba(255,255,255,0.7);
+                        line-height: 1.6;
+                    }
+
+                    .footer-links h3, .footer-contact h3 {
+                        color: white;
+                        margin-bottom: 20px;
+                        font-size: 1.3rem;
+                    }
+
+                    .footer-links ul {
+                        list-style: none;
+                        padding: 0;
+                    }
+
+                    .footer-links li {
+                        margin-bottom: 10px;
+                    }
+
+                    .footer-links a {
+                        color: rgba(255,255,255,0.7);
+                        transition: color 0.3s ease;
+                    }
+
+                        .footer-links a:hover {
+                            color: white;
+                        }
+
+                    .footer-contact ul {
+                        list-style: none;
+                        padding: 0;
+                    }
+
+                    .footer-contact li {
+                        margin-bottom: 15px;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .footer-contact i {
+                        margin-right: 10px;
+                        color: #3a7bd5;
+                    }
+
+                    [dir="rtl"] .footer-contact i {
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+
+                    .footer-bottom {
+                        text-align: center;
+                        padding: 20px 0;
+                        border-top: 1px solid rgba(255,255,255,0.1);
+                        color: rgba(255,255,255,0.7);
+                        font-size: 0.9rem;
+                    }
+
+                    /* Services Section */
+                    .services {
+                        padding: 80px 0;
+                        background: #f8fafc;
+                    }
+
+                    .services-tabs {
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 40px;
+                        flex-wrap: wrap;
+                    }
+
+                    .tab-btn {
+                        background: none;
+                        border: none;
+                        padding: 10px 25px;
+                        margin: 5px;
+                        cursor: pointer;
+                        font-size: 1rem;
+                        border-radius: 30px;
+                        transition: all 0.3s ease;
+                    }
+
+                        .tab-btn.active {
+                            background: #3a7bd5;
+                            color: white;
+                        }
+
+                    .tab-content {
+                        display: none;
+                    }
+
+                        .tab-content.active {
+                            display: block;
+                        }
+
+                    .services-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                        gap: 30px;
+                    }
+
+                    .service-card {
+                      /*  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);*/
+                        padding: 40px 30px;
+                        border-radius: 20px;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+                        text-align: center;
+                        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        border: 1px solid rgba(255, 255, 255, 0.8);
+                        position: relative;
+                        overflow: hidden;
+                    }
+
+                        .service-card::before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: -100%;
+                            width: 100%;
+                            height: 100%;
+                          /*  background: linear-gradient(90deg, transparent, rgba(58, 123, 213, 0.1), transparent);*/
+                            transition: left 0.6s;
+                        }
+
+                        .service-card:hover::before {
+                            left: 100%;
+                        }
+
+                        .service-card:hover {
+                            transform: translateY(-15px) scale(1.02);
+                            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+                            border-color: #3a7bd5;
+                        }
+
+                        .service-card i {
+                            font-size: 3rem;
+                            color: #3a7bd5;
+                            margin-bottom: 25px;
+                            transition: all 0.3s ease;
+                        }
+
+                        .service-card:hover i {
+                            transform: scale(1.1);
+                            color: #2c5fb3;
+                        }
+
+                        .service-card h3 {
+                            margin-bottom: 20px;
+                            color: #2c3e50;
+                            font-size: 1.3rem;
+                            font-weight: 600;
+                        }
+
+                        .service-card p {
+                            color: #5a6a7d;
+                            line-height: 1.6;
+                        }
+
+                    /* About Section */
+                    .about {
+                        padding: 80px 0;
+                        background:rgba(0,0,0,0.05);
+                    }
+                  
+                    .vision-mission {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 30px;
+                        margin-bottom: 50px;
+                    }
+
+                    @media (max-width: 768px) {
+                        .vision-mission {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+
+                    .vm-card {
+                        background: #f8fafc;
+                        padding: 30px;
+                        border-radius: 10px;
+                    }
+
+                        .vm-card h3 {
+                            color: #3a7bd5;
+                            margin-bottom: 20px;
+                            font-size: 1.5rem;
+                        }
+
+                    .mission-points h4 {
+                        margin: 20px 0 10px;
+                        color: #2c3e50;
+                    }
+
+                    .mission-points ul {
+                        padding-left: 20px;
+                    }
+
+                    [dir="rtl"] .mission-points ul {
+                        padding-left: 0;
+                        padding-right: 20px;
+                    }
+
+                    .mission-points li {
+                        margin-bottom: 8px;
+                    }
+
+                    .values {
+                        margin-top: 50px;
+                    }
+
+                        .values h3 {
+                            text-align: center;
+                            margin-bottom: 40px;
+                            font-size: 1.8rem;
+                            color: #2c3e50;
+                        }
+
+                    .values-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                        gap: 30px;
+                    }
+
+                    .value-card {
+                        background: white;
+                        padding: 30px;
+                        border-radius: 10px;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                        text-align: center;
+                        transition: all 0.3s ease;
+                    }
+
+                        .value-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+                        }
+
+                        .value-card i {
+                            font-size: 2rem;
+                            color: #3a7bd5;
+                            margin-bottom: 20px;
+                        }
+
+                        .value-card h4 {
+                            margin-bottom: 15px;
+                            color: #2c3e50;
+                        }
+
+                    /* Clients Section */
+                    .clients {
+                        padding: 80px 0;
+                        background: #f8fafc;
+                    }
+
+                    .clients-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                        gap: 30px;
+                    }
+
+                    .client-card {
+                        background: white;
+                        padding: 30px;
+                        border-radius: 10px;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                        text-align: center;
+                        transition: all 0.3s ease;
+                    }
+
+                        .client-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+                        }
+
+                        .client-card i {
+                            font-size: 2.5rem;
+                            color: #3a7bd5;
+                            margin-bottom: 20px;
+                        }
+
+                        .client-card h3 {
+                            color: #2c3e50;
+                        }
+
+                    /* Skills Section */
+                    .skills {
+                        padding: 80px 0;
+                    }
+
+                    .section-header {
+                        text-align: center;
+                        margin-bottom: 50px;
+                    }
+
+                    .section-subtitle {
+                        color: #5a6a7d;
+                        font-size: 1.2rem;
+                        margin-top: 15px;
+                    }
+
+                    .skills-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                        gap: 30px;
+                    }
+
+                    .skill-card {
+                        background: white;
+                        border-radius: 10px;
+                        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+                        overflow: hidden;
+                        transition: all 0.3s ease;
+                    }
+
+                        .skill-card:hover {
+                            transform: translateY(-10px);
+                            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+                        }
+
+                    .skill-card-inner {
+                        padding: 30px;
+                    }
+
+                    .skill-icon-container {
+                        position: relative;
+                        width: 60px;
+                        height: 60px;
+                        margin: 0 auto 25px;
+                    }
+
+                    .skill-icon-bg {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: #e9f2fd;
+                        border-radius: 50%;
+                        transform: scale(1.1);
+                    }
+
+                    .skill-icon {
+                        position: relative;
+                        color: #3a7bd5;
+                        font-size: 1.8rem;
+                    }
+
+                    .skill-card h3 {
+                        color: #2c3e50;
+                        margin-bottom: 15px;
+                        text-align: center;
+                    }
+
+                    .skill-card p {
+                        color: #5a6a7d;
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+
+                    .skill-meta {
+                        display: flex;
+                        justify-content: center;
+                        gap: 15px;
+                    }
+
+                    .skill-projects, .skill-experience {
+                        background: #f5f7fa;
+                        padding: 5px 15px;
+                        border-radius: 20px;
+                        font-size: 0.9rem;
+                        color: #3a7bd5;
+                    }
+                    /* Add before </head> */
+                </style>
+            </head>
+            <body>
+                <!-- Loading Screen -->
+                <div class="loading-screen" id="loadingScreen">
+                    <div class="loader"></div>
+                </div>
+                <!-- Navigation -->
+                <nav class="navbar">
+                    <div class="lang-toggle">
+                        <button id="langSwitch">EN | English</button>
+                    </div>
+                    <div class="nav-container">
+                        <a href="#home" class="logo-container">
+                            <div class="logo">
+                                <img src="images/logo.png" alt="Aexeron Logo" data-en="Aexeron" data-ar="Aexeron">
+                            </div>
+                        </a>
+
+                        <ul class="nav-links">
+                            <li><a href="#home" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+                            <li><a href="#services" data-en="Services" data-ar="خدماتنا">خدماتنا</a></li>
+                            <li><a href="#about" data-en="About" data-ar="من نحن">من نحن</a></li>
+                            <li><a href="#projects" data-en="Projects" data-ar="مشاريعنا">مشاريعنا</a></li>
+                            <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">اتصل بنا</a></li>
+                        </ul>
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Hero Section -->
+                <section id="home" class="hero">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 data-en="Transforming Ideas Into Smart Digital Solutions" data-ar="تحويل الأفكار إلى حلول رقمية ذكية">تحويل الأفكار إلى حلول رقمية ذكية</h1>
+                            <p data-en="We help entrepreneurs and enterprises leverage artificial intelligence and digital transformation to build competitive solutions."
+                               data-ar="نساعد رواد الأعمال والمؤسسات على الاستفادة من الذكاء الاصطناعي والتحول الرقمي لبناء حلول تنافسية.">
+                                نساعد رواد الأعمال والمؤسسات على الاستفادة من الذكاء الاصطناعي والتحول الرقمي لبناء حلول تنافسية.
+                            </p>
+                            <a href="#contact" class="btn" data-en="Get Started" data-ar="ابدأ معنا">ابدأ معنا</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Services Section -->
+                <section id="services" class="services">
+                    <div class="container">
+                        <h2 class="section-title" data-en="Our Services" data-ar="خدماتنا">خدماتنا</h2>
+
+                        <div class="services-tabs">
+                            <button class="tab-btn active" data-tab="entrepreneurs" data-en="For Entrepreneurs" data-ar="لرواد الأعمال">لرواد الأعمال</button>
+                            <button class="tab-btn" data-tab="enterprises" data-en="For Enterprises" data-ar="للمؤسسات">للمؤسسات</button>
+                        </div>
+
+                        <div class="tab-content active" id="entrepreneurs">
+                            <div class="services-grid">
+                                <div class="service-card">
+                                    <i class="fas fa-rocket"></i>
+                                    <h3 data-en="MVP Development" data-ar="تطوير النماذج الأولية">تطوير النماذج الأولية</h3>
+                                    <p data-en="Building effective prototypes to test ideas quickly in the market."
+                                       data-ar="بناء نماذج أولية فعالة لاختبار الأفكار بسرعة في السوق.">
+                                        بناء نماذج أولية فعالة لاختبار الأفكار بسرعة في السوق.
+                                    </p>
+                                </div>
+                                <div class="service-card">
+                                    <i class="fas fa-laptop-code"></i>
+                                    <h3 data-en="Full Product Development" data-ar="التطوير الكامل للمنتجات">التطوير الكامل للمنتجات</h3>
+                                    <p data-en="End-to-end development of digital products with the latest technologies."
+                                       data-ar="التطوير الشامل للمنتجات الرقمية باستخدام أحدث التقنيات.">
+                                        التطوير الشامل للمنتجات الرقمية باستخدام أحدث التقنيات.
+                                    </p>
+                                </div>
+                                <div class="service-card">
+                                    <i class="fas fa-robot"></i>
+                                    <h3 data-en="AI Integration" data-ar="دمج الذكاء الاصطناعي">دمج الذكاء الاصطناعي</h3>
+                                    <p data-en="Enhancing products with smart AI-powered features."
+                                       data-ar="تعزيز المنتجات بميزات ذكية مدعومة بالذكاء الاصطناعي.">
+                                        تعزيز المنتجات بميزات ذكية مدعومة بالذكاء الاصطناعي.
+                                    </p>
+                                </div>
+                                <div class="service-card">
+                                    <i class="fas fa-user-check"></i>
+                                    <h3 data-en="UI/UX Design" data-ar="تصميم تجربة المستخدم">تصميم تجربة المستخدم</h3>
+                                    <p data-en="Designing intuitive interfaces that enhance user experience."
+                                       data-ar="تصميم واجهات سهلة الاستخدام تعزز تجربة المستخدم.">
+                                        تصميم واجهات سهلة الاستخدام تعزز تجربة المستخدم.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-content" id="enterprises">
+                            <div class="services-grid">
+                                <div class="service-card">
+                                    <i class="fas fa-network-wired"></i>
+                                    <h3 data-en="IT Infrastructure Assessment" data-ar="تقييم البنية التحتية">تقييم البنية التحتية</h3>
+                                    <p data-en="Comprehensive evaluation of your current IT systems."
+                                       data-ar="تقييم شامل للأنظمة التقنية الحالية.">
+                                        تقييم شامل للأنظمة التقنية الحالية.
+                                    </p>
+                                </div>
+                                <div class="service-card">
+                                    <i class="fas fa-chart-line"></i>
+                                    <h3 data-en="Digital Transformation" data-ar="الحلول التحول الرقمي">الحلول التحول الرقمي</h3>
+                                    <p data-en="Integrated solutions for smart digital transformation."
+                                       data-ar="حلول متكاملة للتحول الرقمي الذكي.">
+                                        حلول متكاملة للتحول الرقمي الذكي.
+                                    </p>
+                                </div>
+                                <div class="service-card">
+                                    <i class="fas fa-brain"></i>
+                                    <h3 data-en="AI-Powered Solutions" data-ar="حلول مدعومة بالذكاء الاصطناعي">حلول مدعومة بالذكاء الاصطناعي</h3>
+                                    <p data-en="Implementing AI technologies to improve operational performance."
+                                       data-ar="تنفيذ تقنيات الذكاء الاصطناعي لتحسين الأداء التشغيلي.">
+                                        تنفيذ تقنيات الذكاء الاصطناعي لتحسين الأداء التشغيلي.
+                                    </p>
+                                </div>
+                                <div class="service-card">
+                                    <i class="fas fa-file-contract"></i>
+                                    <h3 data-en="Bid Readiness" data-ar="الجاهزية للمناقصات">الجاهزية للمناقصات</h3>
+                                    <p data-en="Preparing technical and administrative documents for bids."
+                                       data-ar="إعداد الملفات الفنية والإدارية للمناقصات.">
+                                        إعداد الملفات الفنية والإدارية للمناقصات.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section id="about" class="about">
+                    <div class="container">
+                        <div class="about-content">
+                            <h2 class="section-title" data-en="About Aexeron" data-ar="عن اكسيرون">عن اكسيرون</h2>
+                            <div class="vision-mission">
+                                <div class="vm-card">
+                                    <h3 data-en="Our Vision" data-ar="رؤيتنا">رؤيتنا</h3>
+                                    <p data-en="To be the premier technical partner for entrepreneurs in transforming their innovative ideas into successful digital products, while providing integrated solutions for enterprises that include evaluating and developing IT infrastructure and integrating AI technologies to enhance digital transformation and improve operational performance."
+                                       data-ar="أن نكون الشريك التقني الأول لروّاد الأعمال في تحويل أفكارهم الريادية إلى منتجات رقمية ذكية وناجحة، مع تقديم حلول متكاملة للمؤسسات تشمل تقييم وتطوير البنية التحتية التقنية ودمج تقنيات الذكاء الاصطناعي لتعزيز التحول الرقمي وتحسين الأداء التشغيلي.">
+                                        أن نكون الشريك التقني الأول لروّاد الأعمال في تحويل أفكارهم الريادية إلى منتجات رقمية ذكية وناجحة، مع تقديم حلول متكاملة للمؤسسات تشمل تقييم وتطوير البنية التحتية التقنية ودمج تقنيات الذكاء الاصطناعي لتعزيز التحول الرقمي وتحسين الأداء التشغيلي.
+                                    </p>
+                                </div>
+                                <div class="vm-card">
+                                    <h3 data-en="Our Mission" data-ar="رسالتنا">رسالتنا</h3>
+                                    <div class="mission-points">
+                                        <h4 data-en="For Entrepreneurs:" data-ar="لرواد الأعمال:">لرواد الأعمال:</h4>
+                                        <ul>
+                                            <li data-en="Transform ideas into smart digital products" data-ar="تحويل الأفكار إلى منتجات رقمية ذكية">تحويل الأفكار إلى منتجات رقمية ذكية</li>
+                                            <li data-en="Develop prototypes (MVP)" data-ar="تطوير النماذج الأولية">تطوير النماذج الأولية</li>
+                                            <li data-en="Full technical product design and development" data-ar="التصميم والتطوير الكامل للمنتجات التقنية">التصميم والتطوير الكامل للمنتجات التقنية</li>
+                                            <li data-en="Integrate AI technologies" data-ar="دمج تقنيات الذكاء الاصطناعي">دمج تقنيات الذكاء الاصطناعي</li>
+                                        </ul>
+
+                                        <h4 data-en="For Enterprises:" data-ar="للمؤسسات:">للمؤسسات:</h4>
+                                        <ul>
+                                            <li data-en="Comprehensive IT infrastructure assessment" data-ar="تقييم شامل للبنية التحتية التقنية">تقييم شامل للبنية التحتية التقنية</li>
+                                            <li data-en="Performance improvement through smart data-driven solutions" data-ar="تحسين الأداء عبر حلول ذكية تعتمد على البيانات">تحسين الأداء عبر حلول ذكية تعتمد على البيانات</li>
+                                            <li data-en="Design and implement integrated digital transformation solutions supported by AI" data-ar="تصميم وتنفيذ حلول التحول الرقمي المتكاملة المدعومة بالذكاء الاصطناعي">تصميم وتنفيذ حلول التحول الرقمي المتكاملة المدعومة بالذكاء الاصطناعي</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="values">
+                                <h3 data-en="Our Values" data-ar="قيمنا">قيمنا</h3>
+                                <div class="values-grid">
+                                    <div class="value-card">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <h4 data-en="Technical Leadership" data-ar="الريادة التقنية">الريادة التقنية</h4>
+                                        <p data-en="Keeping up with the latest technologies including AI"
+                                           data-ar="مواكبة أحدث التقنيات بما فيها الذكاء الاصطناعي">
+                                            مواكبة أحدث التقنيات بما فيها الذكاء الاصطناعي
+                                        </p>
+                                    </div>
+                                    <div class="value-card">
+                                        <i class="fas fa-cogs"></i>
+                                        <h4 data-en="Practical Innovation" data-ar="الابتكار العملي">الابتكار العملي</h4>
+                                        <p data-en="Integrating creativity, technology, and AI"
+                                           data-ar="دمج بين الإبداع، والتقنية، والذكاء الاصطناعي">
+                                            دمج بين الإبداع، والتقنية، والذكاء الاصطناعي
+                                        </p>
+                                    </div>
+                                    <div class="value-card">
+                                        <i class="fas fa-handshake"></i>
+                                        <h4 data-en="Strategic Partnership" data-ar="الشراكة الاستراتيجية">الشراكة الاستراتيجية</h4>
+                                        <p data-en="Acting as sustainable growth partners"
+                                           data-ar="نعمل كشركاء نمو مستدام لعملائنا">
+                                            نعمل كشركاء نمو مستدام لعملائنا
+                                        </p>
+                                    </div>
+                                    <div class="value-card">
+                                        <i class="fas fa-award"></i>
+                                        <h4 data-en="Total Quality" data-ar="الجودة الشاملة">الجودة الشاملة</h4>
+                                        <p data-en="Commitment to the highest standards of accuracy"
+                                           data-ar="الالتزام بأعلى معايير الدقة والاعتمادية">
+                                            الالتزام بأعلى معايير الدقة والاعتمادية
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Clients Section -->
+                <section class="clients">
+                    <div class="container">
+                        <h2 class="section-title" data-en="Our Clients" data-ar="عملاؤنا">عملاؤنا</h2>
+                        <div class="clients-grid">
+                            <div class="client-card">
+                                <i class="fas fa-user-tie"></i>
+                                <h3 data-en="Entrepreneurs" data-ar="رواد الأعمال">رواد الأعمال</h3>
+                            </div>
+                            <div class="client-card">
+                                <i class="fas fa-startup"></i>
+                                <h3 data-en="Startups" data-ar="الشركات الناشئة">الشركات الناشئة</h3>
+                            </div>
+                            <div class="client-card">
+                                <i class="fas fa-building"></i>
+                                <h3 data-en="SMEs" data-ar="المؤسسات الصغيرة والمتوسطة">المؤسسات الصغيرة والمتوسطة</h3>
+                            </div>
+                            <div class="client-card">
+                                <i class="fas fa-landmark"></i>
+                                <h3 data-en="Government Entities" data-ar="الكيانات الحكومية">الكيانات الحكومية</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section id="skills" class="skills">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title" data-en="Our Core Capabilities" data-ar="مهاراتنا الأساسية">مهاراتنا الأساسية</h2>
+                            <p class="section-subtitle" data-en="The expertise that powers our solutions" data-ar="الخبرات التي تقف وراء حلولنا">الخبرات التي تقف وراء حلولنا</p>
+                        </div>
+
+                        <div class="skills-container">
+                            <div class="skills-grid">
+                                <!-- Skill Card 1 -->
+                                <div class="skill-card">
+                                    <div class="skill-card-inner">
+                                        <div class="skill-icon-container">
+                                            <div class="skill-icon-bg"></div>
+                                            <i class="fas fa-brain skill-icon"></i>
+                                        </div>
+                                        <h3 data-en="Artificial Intelligence" data-ar="الذكاء الاصطناعي">الذكاء الاصطناعي</h3>
+                                        <p data-en="Advanced AI solutions including machine learning,AI Integration"
+                                           data-ar="حلول متقدمة في الذكاء الاصطناعي تشمل تعلم الآلةوالتكامل مع الذكاء الاصطناعي">
+                                            حلول متقدمة في الذكاء الاصطناعي تشمل تعلم الآلةوالتكامل مع الذكاء الاصطناعي
+
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+
+                              
+
+
+                                <!-- Skill Card 4 -->
+                                <div class="skill-card">
+                                    <div class="skill-card-inner">
+                                        <div class="skill-icon-container">
+                                            <div class="skill-icon-bg"></div>
+                                            <i class="fas fa-mobile-alt skill-icon"></i>
+                                        </div>
+                                        <h3 data-en="Web & Mobile Development" data-ar="تطوير التطبيقات">تطوير التطبيقات</h3>
+                                        <p data-en="Web and Mobile deveoplemnt IOS,Android,Java,.NET,React "
+                                           data-ar="تطبيقات متنقلة متعددة المنصات باستخدام Java,.NET,IOS,Android,React">
+                                            تطبيقات الويب والموبايل باستخدام Java,.NET,IOS,Android,React
+                                        </p>
+                                       
+                                    </div>
+                                </div>
+
+                               
+
+                                <!-- Skill Card 6 -->
+                                <div class="skill-card">
+                                    <div class="skill-card-inner">
+                                        <div class="skill-icon-container">
+                                            <div class="skill-icon-bg"></div>
+                                            <i class="fas fa-project-diagram skill-icon"></i>
+                                        </div>
+                                        <h3 data-en="Digital Transformation" data-ar="التحول الرقمي">التحول الرقمي</h3>
+                                        <p data-en="End-to-end digital transformation strategies"
+                                           data-ar="استراتيجيات تحول رقمي متكاملة">
+                                            استراتيجيات تحول رقمي متكاملة
+                                        </p>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Hero -->
+                <section class="projects-hero">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 data-en="Sample of Our Projects"
+                                data-ar="عينة من أعمالنا">
+                                عينة من أعمالنا
+                            </h1>
+
+                            <p class="subtitle" data-en="Where innovation meets execution"
+                               data-ar="حيث يلتقي الابتكار بالتنفيذ">
+                                حيث يلتقي الابتكار بالتنفيذ
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section id="projects" class="projects-section">
+                    <div class="container">
+                        <!-- Project 1 - OpTube -->
+                        <div class="project-card">
+                            <div class="project-info">
+                                <h2 data-en="OpTube Social Media Platform" data-ar="منصة أوبتيوب للتواصل الاجتماعي">منصة أوپتيوب للتواصل الاجتماعي</h2>
+                                <div class="project-meta">
+                                    <span class="category" data-en="Mobile & Web Platform" data-ar="منصة ويب وموبايل">منصة ويب  وموبايل</span>
+                                </div>
+                                <p data-en="A cutting-edge, user-centric social media platform with over 100,000 downloads, offering video streaming, live streaming, interactive chat, stories, and posts, all enhanced with advanced AI integration."
+                                   data-ar="منصة تواصل اجتماعي حديثة تركز على المستخدم مع أكثر من 100,000 تنزيل، تقدم بث الفيديو، البث المباشر، الدردشة التفاعلية، القصص والمنشورات، كلها معززة بتكامل متقدم للذكاء الاصطناعي.">
+                                    منصة تواصل اجتماعي حديثة تركز على المستخدم مع أكثر من 100,000 تنزيل، تقدم بث الفيديو، البث المباشر، الدردشة التفاعلية، القصص والمنشورات، كلها معززة بتكامل متقدم للذكاء الاصطناعي.
+                                </p>
+                                <div class="project-features">
+                                    <h3 data-en="Key Features" data-ar="المميزات الرئيسية">المميزات الرئيسية</h3>
+                                    <ul class="feature-list">
+                                        <li data-en="Video and live streaming capabilities" data-ar="قدرات بث الفيديو والبث المباشر">قدرات بث الفيديو والبث المباشر</li>
+                                        <li data-en="Interactive chat and social features" data-ar="دردشة تفاعلية وميزات اجتماعية">دردشة تفاعلية وميزات اجتماعية</li>
+                                        <li data-en="AI-powered personalization" data-ar="تخصيص مدعوم بالذكاء الاصطناعي">تخصيص مدعوم بالذكاء الاصطناعي</li>
+                                        <li data-en="Microservices architecture for scalability" data-ar="هندسة ميكروسيرفس للتوسع">هندسة ميكروسيرفس للتوسع</li>
+                                        <li data-en="Robust analytics dashboard" data-ar="لوحة تحليلات قوية">لوحة تحليلات قوية</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <a href="images/optube/op5.jpg" class="gallery-item">
+                                    <img src="images/optube/op5.jpg" alt="OpTube Screenshot">
+                                </a>
+                                <a href="images/optube/op3.jpg" class="gallery-item">
+                                    <img src="images/optube/op3.jpg" alt="OpTube Screenshot">
+                                </a>
+                                <a href="images/optube/op4.jpg" class="gallery-item">
+                                    <img src="images/optube/op4.jpg" alt="OpTube Screenshot">
+                                </a>
+                                <a href="images/optube/op2.jpg" class="gallery-item">
+                                    <img src="images/optube/op2.jpg" alt="OpTube Screenshot">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 2 - ArtfulAlbums -->
+                        <div class="project-card">
+                            <div class="project-info">
+                                <h2 data-en="ArtfulAlbums Photography Platform" data-ar="منصة آرتفول ألبوم للتصوير الفوتوغرافي">منصة آرتفول ألبوم للتصوير الفوتوغرافي</h2>
+                                <div class="project-meta">
+                                    <span class="category" data-en="Web & Mobile Platform" data-ar="منصة ويب موبايل">منصة ويب وموبايل</span>
+                                </div>
+                                <p data-en="A comprehensive platform for photographers to create albums, manage orders, and streamline their workflow with integrated financial tracking and client communication tools."
+                                   data-ar="منصة متكاملة للمصورين الفوتوغرافيين لإنشاء الألبومات، إدارة الطلبات، وتبسيط سير العمل مع أدوات متكاملة للتتبع المالي وتواصل العملاء.">
+                                    منصة متكاملة للمصورين الفوتوغرافيين لإنشاء الألبومات، إدارة الطلبات، وتبسيط سير العمل مع أدوات متكاملة للتتبع المالي وتواصل العملاء.
+                                </p>
+                                <div class="project-features">
+                                    <h3 data-en="Key Features" data-ar="المميزات الرئيسية">المميزات الرئيسية</h3>
+                                    <ul class="feature-list">
+                                        <li data-en="Album creation and styling tools" data-ar="أدوات إنشاء وتصميم الألبومات">أدوات إنشاء وتصميم الألبومات</li>
+                                        <li data-en="Integrated order management system" data-ar="نظام متكامل لإدارة الطلبات">نظام متكامل لإدارة الطلبات</li>
+                                        <li data-en="Direct communication with printers" data-ar="تواصل مباشر مع شركات الطباعة">تواصل مباشر مع شركات الطباعة</li>
+                                        <li data-en="Financial tracking and reporting" data-ar="تتبع مالي وإعداد التقارير">تتبع مالي وإعداد التقارير</li>
+                                        <li data-en="Mobile app for on-the-go access" data-ar="تطبيق موبايل للوصول من أي مكان">تطبيق موبايل للوصول من أي مكان</li>
+                                        <li data-en="Secure payment integration" data-ar="تكامل آمن مع أنظمة الدفع">تكامل آمن مع أنظمة الدفع</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <a href="images/artfulalbums/art1.jpg" class="gallery-item">
+                                    <img src="images/artfulalbums/art1.jpg" alt="ArtfulAlbums Dashboard">
+                                </a>
+                                <a href="images/artfulalbums/art2.jpg" class="gallery-item">
+                                    <img src="images/artfulalbums/art2.jpg" alt="ArtfulAlbums Dashboard">
+                                </a>
+                                <a href="images/artfulalbums/art3.jpg" class="gallery-item">
+                                    <img src="images/artfulalbums/art3.jpg" alt="ArtfulAlbums Dashboard">
+                                </a>
+                                <a href="images/artfulalbums/art4.png" class="gallery-item">
+                                    <img src="images/artfulalbums/art4.png" alt="ArtfulAlbums Dashboard">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 -->
+                        <div class="project-card">
+                            <div class="project-info">
+                                <h2 data-en="Carpet Cleaning & Services Management System" data-ar="نظام إدارة مغاسل السجاد وشركات التنظيف">نظام إدارة مغاسل السجاد وشركات التنظيف</h2>
+                                <div class="project-meta">
+                                    <span class="category" data-en="Web and mobile Responsive Platform" data-ar="منصة ويب متكاملة مع الموبايل">منصة ويب متكاملة مع الموبايل</span>
+                                </div>
+                                <p data-en="A comprehensive and advanced platform for managing carpet and upholstery cleaning companies and all types of cleaning services. It combines easy customer service requests, internal workflow management, and real-time communication, within a professional Arabic interface tailored to daily business operations."
+                                   data-ar="منصة متكاملة ومتقدمة لإدارة شركات تنظيف السجاد والمفروشات وجميع أنواع خدمات التنظيف، تجمع بين سهولة طلب الخدمة من العملاء، وإدارة العمليات الداخلية، والتواصل الفوري، ضمن واجهة عربية احترافية مصممة لتناسب طبيعة العمل اليومي.">
+                                    منصة متكاملة ومتقدمة لإدارة شركات تنظيف السجاد والمفروشات وجميع أنواع خدمات التنظيف، تجمع بين سهولة طلب الخدمة من العملاء، وإدارة العمليات الداخلية، والتواصل الفوري، ضمن واجهة عربية احترافية مصممة لتناسب طبيعة العمل اليومي.
+                                </p>
+                                <div class="project-features">
+                                    <h3 data-en="Key Features" data-ar="المميزات الرئيسية">المميزات الرئيسية</h3>
+                                    <ul>
+                                        <li data-en="Real-time tracking of order status from pickup to final delivery" data-ar="متابعة حالة الطلب لحظة بلحظة من استلام القطع وحتى التوصيل النهائي للزبون">متابعة حالة الطلب لحظة بلحظة من استلام القطع وحتى التوصيل النهائي للزبون</li>
+                                        <li data-en="Automatic invoice calculation based on quantity, size, and service type" data-ar="احتساب آلي لتكلفة الفاتورة حسب عدد القطع، الأمتار، ونوع الخدمة (سجاد، كنب، فرش، شقق... إلخ)">احتساب آلي لتكلفة الفاتورة حسب عدد القطع، الأمتار، ونوع الخدمة (سجاد، كنب، فرش، شقق... إلخ)</li>
+                                        <li data-en="Automated SMS notifications to customers upon service completion including invoice value" data-ar="إرسال رسالة نصية تلقائية إلى الزبون عند اكتمال التنظيف تشمل قيمة الفاتورة">إرسال رسالة نصية تلقائية إلى الزبون عند اكتمال التنظيف تشمل قيمة الفاتورة</li>
+                                        <li data-en="Full warehouse tracking with tagging and detailed item tracking" data-ar="نظام مخزني شامل مع ترميز وتتبع دقيق لكل قطعة أو خدمة داخل مراحل المعالجة">نظام مخزني شامل مع ترميز وتتبع دقيق لكل قطعة أو خدمة داخل مراحل المعالجة</li>
+                                        <li data-en="Flexible dashboards for managing orders by employees, drivers, and supervisors" data-ar="لوحات تحكم مرنة لإدارة الطلبات من قبل الموظفين، السائقين، والمشرفين">لوحات تحكم مرنة لإدارة الطلبات من قبل الموظفين، السائقين، والمشرفين</li>
+                                        <li data-en="Online service request with mobile OTP verification" data-ar="طلب الخدمة إلكترونيًا مع التحقق الفوري عبر رمز OTP يُرسل لهاتف الزبون">طلب الخدمة إلكترونيًا مع التحقق الفوري عبر رمز OTP يُرسل لهاتف الزبون</li>
+                                        <li data-en="Operational and financial reports to support decision-making" data-ar="تقارير تشغيلية ومالية مفصلة تساعد الإدارة في اتخاذ قرارات مبنية على بيانات واقعية">تقارير تشغيلية ومالية مفصلة تساعد الإدارة في اتخاذ قرارات مبنية على بيانات واقعية</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="project-gallery" id="gallery3">
+                                <!-- First Row - Full Width Image -->
+                                <div class="gallery-row">
+                                    <a href="images/cleaning/clean1.jpg" class="gallery-item full-width">
+                                        <img src="images/cleaning/clean1.jpg" alt="Cleaning Management System Screenshot">
+                                    </a>
+                                </div>
+
+                                <!-- Second Row - Full Width Image -->
+                                <div class="gallery-row">
+                                    <a href="images/cleaning/clean2.png" class="gallery-item full-width">
+                                        <img src="images/cleaning/clean2.png" alt="Cleaning Process Screenshot">
+                                    </a>
+                                </div>
+
+                                <div class="gallery-row">
+                                    <a href="images/cleaning/clean4.png" class="gallery-item full-width">
+                                        <img src="images/cleaning/clean4.png" alt="Warehouse Tracking Screenshot">
+                                    </a>
+                                </div>
+
+                                <div class="gallery-row">
+                                    <a href="images/cleaning/clean3.png" class="gallery-item full-width">
+                                        <img src="images/cleaning/clean3.png" alt="Order Management Screenshot">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="projects-cta contact-section-combined" id="contact">
+                    <div class="container">
+                        <!-- CTA Content -->
+                        <div class="cta-content">
+                            <h2 data-en="Have a project in mind?" data-ar="هل لديك مشروع في ذهنك؟">هل لديك مشروع في ذهنك؟</h2>
+                            <p data-en="Let's discuss how we can turn your idea into a successful digital solution"
+                               data-ar="لنتناقش حول كيفية تحويل فكرتك إلى حل رقمي ناجح">
+                                لنتناقش حول كيفية تحويل فكرتك إلى حل رقمي ناجح
+                            </p>
+                        </div>
+
+                        <!-- Contact Header -->
+                        <div class="section-header">
+                            <h2 class="section-title" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</h2>
+                            <p class="section-subtitle" data-en="Get in touch with our team" data-ar="تواصل مع فريقنا">تواصل مع فريقنا</p>
+                        </div>
+
+                        <!-- Contact Content -->
+                        <div class="contact-content-horizontal">
+                            <!-- Contact Info -->
+                            <div class="contact-info-horizontal">
+                                <div class="info-row">
+                                    <div class="info-card-horizontal">
+                                        <div class="info-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div class="info-content">
+                                            <h3 data-en="Our Address" data-ar="عنواننا">عنواننا</h3>
+                                            <p data-en="Ramallah,Palestine"
+                                               data-ar=" رام الله ، فلسطين">
+                                              رام الله، فلسطين
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="info-card-horizontal">
+                                        <div class="info-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="info-content">
+                                            <h3 data-en="Email Us" data-ar="البريد الإلكتروني">البريد الإلكتروني</h3>
+                                            <p>info@aexeron.com</p>
+                                            <p>support@aexeron.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Social Media -->
+                                <div class="info-row social-media-row">
+                                    <div class="social-media-card">
+                                        <h3 data-en="Follow Us" data-ar="تابعنا">تابعنا</h3>
+                                        <div class="social-links">
+                                            <a href="https://linkedin.com/company/aexeron" target="_blank" aria-label="LinkedIn">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                            <a href="https://facebook.com/aexeron" target="_blank" aria-label="Facebook">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                            <a href="https://twitter.com/aexeron" target="_blank" aria-label="Twitter">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="https://instagram.com/aexeron" target="_blank" aria-label="Instagram">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Projects Section -->
+                <!-- Projects Section -->
+                <!--<section id="projects" class="projects-section">
+        <div class="container">-->
+                <!-- Project 1 - OpTube -->
+                <!--<div class="project-card fade-in-left">
+        <div class="project-info">
+            <h2 data-en="OpTube Social Media Platform" data-ar="منصة أوبتيوب للتواصل الاجتماعي">منصة أوپتيوب للتواصل الاجتماعي</h2>
+            <div class="project-meta">
+                <span class="category" data-en="Mobile & Web Platform" data-ar="منصة ويب وموبايل">منصة ويب وموبايل</span>
+            </div>
+            <p data-en="A cutting-edge, user-centric social media platform with over 100,000 downloads, offering video streaming, live streaming, interactive chat, stories, and posts, all enhanced with advanced AI integration."
+               data-ar="منصة تواصل اجتماعي حديثة تركز على المستخدم مع أكثر من 100,000 تنزيل، تقدم بث الفيديو، البث المباشر، الدردشة التفاعلية، القصص والمنشورات، كلها معززة بتكامل متقدم للذكاء الاصطناعي.">
+                منصة تواصل اجتماعي حديثة تركز على المستخدم مع أكثر من 100,000 تنزيل، تقدم بث الفيديو، البث المباشر، الدردشة التفاعلية، القصص والمنشورات، كلها معززة بتكامل متقدم للذكاء الاصطناعي.
+            </p>
+            <div class="project-features">
+                <h3 data-en="Key Features" data-ar="المميزات الرئيسية">المميزات الرئيسية</h3>
+                <ul class="feature-list">
+                    <li data-en="Video and live streaming capabilities" data-ar="قدرات بث الفيديو والبث المباشر">قدرات بث الفيديو والبث المباشر</li>
+                    <li data-en="Interactive chat and social features" data-ar="دردشة تفاعلية وميزات اجتماعية">دردشة تفاعلية وميزات اجتماعية</li>
+                    <li data-en="AI-powered personalization" data-ar="تخصيص مدعوم بالذكاء الاصطناعي">تخصيص مدعوم بالذكاء الاصطناعي</li>
+                    <li data-en="Microservices architecture for scalability" data-ar="هندسة ميكروسيرفس للتوسع">هندسة ميكروسيرفس للتوسع</li>
+                    <li data-en="Robust analytics dashboard" data-ar="لوحة تحليلات قوية">لوحة تحليلات قوية</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-gallery">
+            <a href="images/optube/op5.jpg" class="gallery-item">
+                <img src="images/optube/op5.jpg" alt="OpTube Screenshot">
+            </a>
+            <a href="images/optube/op3.jpg" class="gallery-item">
+                <img src="images/optube/op3.jpg" alt="OpTube Screenshot">
+            </a>
+            <a href="images/optube/op4.jpg" class="gallery-item">
+                <img src="images/optube/op4.jpg" alt="OpTube Screenshot">
+            </a>
+            <a href="images/optube/op2.jpg" class="gallery-item">
+                <img src="images/optube/op2.jpg" alt="OpTube Screenshot">
+            </a>
+        </div>
+    </div>-->
+                <!-- Project 2 - ArtfulAlbums -->
+                <!--<div class="project-card fade-in-right">
+        <div class="project-info">
+            <h2 data-en="ArtfulAlbums Photography Platform" data-ar="منصة آرتفول ألبوم للتصوير الفوتوغرافي">منصة آرتفول ألبوم للتصوير الفوتوغرافي</h2>
+            <div class="project-meta">
+                <span class="category" data-en="Web & Mobile Platform" data-ar="منصة ويب موبايل">منصة ويب وموبايل</span>
+            </div>
+            <p data-en="A comprehensive platform for photographers to create albums, manage orders, and streamline their workflow with integrated financial tracking and client communication tools."
+               data-ar="منصة متكاملة للمصورين الفوتوغرافيين لإنشاء الألبومات، إدارة الطلبات، وتبسيط سير العمل مع أدوات متكاملة للتتبع المالي وتواصل العملاء.">
+                منصة متكاملة للمصورين الفوتوغرافيين لإنشاء الألبومات، إدارة الطلبات، وتبسيط سير العمل مع أدوات متكاملة للتتبع المالي وتواصل العملاء.
+            </p>
+            <div class="project-features">
+                <h3 data-en="Key Features" data-ar="المميزات الرئيسية">المميزات الرئيسية</h3>
+                <ul class="feature-list">
+                    <li data-en="Album creation and styling tools" data-ar="أدوات إنشاء وتصميم الألبومات">أدوات إنشاء وتصميم الألبومات</li>
+                    <li data-en="Integrated order management system" data-ar="نظام متكامل لإدارة الطلبات">نظام متكامل لإدارة الطلبات</li>
+                    <li data-en="Direct communication with printers" data-ar="تواصل مباشر مع شركات الطباعة">تواصل مباشر مع شركات الطباعة</li>
+                    <li data-en="Financial tracking and reporting" data-ar="تتبع مالي وإعداد التقارير">تتبع مالي وإعداد التقارير</li>
+                    <li data-en="Mobile app for on-the-go access" data-ar="تطبيق موبايل للوصول من أي مكان">تطبيق موبايل للوصول من أي مكان</li>
+                    <li data-en="Secure payment integration" data-ar="تكامل آمن مع أنظمة الدفع">تكامل آمن مع أنظمة الدفع</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-gallery">
+            <a href="images/artfulalbums/art1.jpg" class="gallery-item">
+                <img src="images/artfulalbums/art1.jpg" alt="ArtfulAlbums Dashboard">
+            </a>
+            <a href="images/artfulalbums/art2.jpg" class="gallery-item">
+                <img src="images/artfulalbums/art2.jpg" alt="ArtfulAlbums Dashboard">
+            </a>
+            <a href="images/artfulalbums/art3.jpg" class="gallery-item">
+                <img src="images/artfulalbums/art3.jpg" alt="ArtfulAlbums Dashboard">
+            </a>
+            <a href="images/artfulalbums/art4.png" class="gallery-item">
+                <img src="images/artfulalbums/art4.png" alt="ArtfulAlbums Dashboard">
+            </a>
+        </div>
+    </div>-->
+                <!-- Project 3 - Cleaning Management System -->
+                <!--<div class="project-card fade-in-left">
+        <div class="project-info">
+            <h2 data-en="Carpet Cleaning & Services Management System" data-ar="نظام إدارة مغاسل السجاد وشركات التنظيف">نظام إدارة مغاسل السجاد وشركات التنظيف</h2>
+            <div class="project-meta">
+                <span class="category" data-en="Web and mobile Responsive Platform" data-ar="منصة ويب متكاملة مع الموبايل">منصة ويب متكاملة مع الموبايل</span>
+            </div>
+            <p data-en="A comprehensive and advanced platform for managing carpet and upholstery cleaning companies and all types of cleaning services. It combines easy customer service requests, internal workflow management, and real-time communication, within a professional Arabic interface tailored to daily business operations."
+               data-ar="منصة متكاملة ومتقدمة لإدارة شركات تنظيف السجاد والمفروشات وجميع أنواع خدمات التنظيف، تجمع بين سهولة طلب الخدمة من العملاء، وإدارة العمليات الداخلية، والتواصل الفوري، ضمن واجهة عربية احترافية مصممة لتناسب طبيعة العمل اليومي.">
+                منصة متكاملة ومتقدمة لإدارة شركات تنظيف السجاد والمفروشات وجميع أنواع خدمات التنظيف، تجمع بين سهولة طلب الخدمة من العملاء، وإدارة العمليات الداخلية، والتواصل الفوري، ضمن واجهة عربية احترافية مصممة لتناسب طبيعة العمل اليومي.
+            </p>
+            <div class="project-features">
+                <h3 data-en="Key Features" data-ar="المميزات الرئيسية">المميزات الرئيسية</h3>
+                <ul class="feature-list">
+                    <li data-en="Real-time tracking of order status from pickup to final delivery" data-ar="متابعة حالة الطلب لحظة بلحظة من استلام القطع وحتى التوصيل النهائي للزبون">متابعة حالة الطلب لحظة بلحظة من استلام القطع وحتى التوصيل النهائي للزبون</li>
+                    <li data-en="Automatic invoice calculation based on quantity, size, and service type" data-ar="احتساب آلي لتكلفة الفاتورة حسب عدد القطع، الأمتار، ونوع الخدمة (سجاد، كنب، فرش، شقق... إلخ)">احتساب آلي لتكلفة الفاتورة حسب عدد القطع، الأمتار، ونوع الخدمة (سجاد، كنب، فرش، شقق... إلخ)</li>
+                    <li data-en="Automated SMS notifications to customers upon service completion including invoice value" data-ar="إرسال رسالة نصية تلقائية إلى الزبون عند اكتمال التنظيف تشمل قيمة الفاتورة">إرسال رسالة نصية تلقائية إلى الزبون عند اكتمال التنظيف تشمل قيمة الفاتورة</li>
+                    <li data-en="Full warehouse tracking with tagging and detailed item tracking" data-ar="نظام مخزني شامل مع ترميز وتتبع دقيق لكل قطعة أو خدمة داخل مراحل المعالجة">نظام مخزني شامل مع ترميز وتتبع دقيق لكل قطعة أو خدمة داخل مراحل المعالجة</li>
+                    <li data-en="Flexible dashboards for managing orders by employees, drivers, and supervisors" data-ar="لوحات تحكم مرنة لإدارة الطلبات من قبل الموظفين، السائقين، والمشرفين">لوحات تحكم مرنة لإدارة الطلبات من قبل الموظفين، السائقين، والمشرفين</li>
+                    <li data-en="Online service request with mobile OTP verification" data-ar="طلب الخدمة إلكترونيًا مع التحقق الفوري عبر رمز OTP يُرسل لهاتف الزبون">طلب الخدمة إلكترونيًا مع التحقق الفوري عبر رمز OTP يُرسل لهاتف الزبون</li>
+                    <li data-en="Operational and financial reports to support decision-making" data-ar="تقارير تشغيلية ومالية مفصلة تساعد الإدارة في اتخاذ قرارات مبنية على بيانات واقعية">تقارير تشغيلية ومالية مفصلة تساعد الإدارة في اتخاذ قرارات مبنية على بيانات واقعية</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-gallery" id="gallery3">
+            <div class="gallery-row">
+                <a href="images/cleaning/clean1.jpg" class="gallery-item full-width">
+                    <img src="images/cleaning/clean1.jpg" alt="Cleaning Management System Screenshot">
+                </a>
+            </div>
+            <div class="gallery-row">
+                <a href="images/cleaning/clean2.png" class="gallery-item full-width">
+                    <img src="images/cleaning/clean2.png" alt="Cleaning Process Screenshot">
+                </a>
+            </div>
+            <div class="gallery-row">
+                <a href="images/cleaning/clean4.png" class="gallery-item full-width">
+                    <img src="images/cleaning/clean4.png" alt="Warehouse Tracking Screenshot">
+                </a>
+            </div>
+            <div class="gallery-row">
+                <a href="images/cleaning/clean3.png" class="gallery-item full-width">
+                    <img src="images/cleaning/clean3.png" alt="Order Management Screenshot">
+                </a>
+            </div>
+        </div>
+    </div>-->
+                <!-- Project 4 - E-Commerce Platform -->
+                <!--<div class="project-card fade-in-right">
+        <div class="project-info">
+            <h2 data-en="E-Commerce Platform with AI Recommendations" data-ar="منصة تجارة إلكترونية مع توصيات ذكاء اصطناعي">منصة تجارة إلكترونية مع توصيات ذكاء اصطناعي</h2>
+            <div class="project-meta">
+                <span class="category" data-en="Web & Mobile Platform" data-ar="منصة ويب وموبايل">منصة ويب وموبايل</span>
+            </div>
+            <p data-en="A complete e-commerce solution with AI-powered product recommendations, personalized shopping experiences, and advanced inventory management for retail businesses."
+               data-ar="حل متكامل للتجارة الإلكترونية مع توصيات المنتجات المدعومة بالذكاء الاصطناعي، تجارب تسوق مخصصة، وإدارة متقدمة للمخزون للشركات التجارية.">
+                حل متكامل للتجارة الإلكترونية مع توصيات المنتجات المدعومة بالذكاء الاصطناعي، تجارب تسوق مخصصة، وإدارة متقدمة للمخزون للشركات التجارية.
+            </p>
+            <div class="project-features">
+                <h3 data-en="Key Features" data-ar="المميزات الرئيسية">المميزات الرئيسية</h3>
+                <ul class="feature-list">
+                    <li data-en="AI-powered product recommendations" data-ar="توصيات المنتجات المدعومة بالذكاء الاصطناعي">توصيات المنتجات المدعومة بالذكاء الاصطناعي</li>
+                    <li data-en="Personalized shopping experiences" data-ar="تجارب تسوق مخصصة">تجارب تسوق مخصصة</li>
+                    <li data-en="Advanced inventory management" data-ar="إدارة متقدمة للمخزون">إدارة متقدمة للمخزون</li>
+                    <li data-en="Multi-vendor marketplace support" data-ar="دعم سوق متعدد البائعين">دعم سوق متعدد البائعين</li>
+                    <li data-en="Integrated payment gateways" data-ar="بوابات دفع متكاملة">بوابات دفع متكاملة</li>
+                    <li data-en="Real-time analytics dashboard" data-ar="لوحة تحليلات فورية">لوحة تحليلات فورية</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-gallery">
+            <a href="images/ecommerce/ec1.jpg" class="gallery-item">
+                <img src="images/ecommerce/ec1.jpg" alt="E-Commerce Dashboard">
+            </a>
+            <a href="images/ecommerce/ec2.jpg" class="gallery-item">
+                <img src="images/ecommerce/ec2.jpg" alt="E-Commerce Product Page">
+            </a>
+            <a href="images/ecommerce/ec3.jpg" class="gallery-item">
+                <img src="images/ecommerce/ec3.jpg" alt="E-Commerce Checkout">
+            </a>
+            <a href="images/ecommerce/ec4.jpg" class="gallery-item">
+                <img src="images/ecommerce/ec4.jpg" alt="E-Commerce Admin Panel">
+            </a>
+        </div>
+    </div>-->
+                <!-- Project 5 - Healthcare Management System -->
+                <!--<div class="project-card fade-in-left">
+                <div class="project-info">
+                    <h2 data-en="Healthcare Management System" data-ar="نظام إدارة الرعاية الصحية">نظام إدارة الرعاية الصحية</h2>
+                    <div class="project-meta">
+                        <span class="category" data-en="Enterprise Healthcare Solution" data-ar="حل متكامل للرعاية الصحية">حل متكامل للرعاية الصحية</span>
+                    </div>
+                    <p data-en="A comprehensive healthcare management system for hospitals and clinics, integrating patient records, appointment scheduling, billing, and telemedicine capabilities."
+                       data-ar="نظام متكامل لإدارة الرعاية الصحية للمستشفيات والعيادات، يدمج السجلات الطبية للمرضى، جدولة المواعيد، الفواتير، وإمكانيات الطب عن بعد.">
+                        نظام متكامل لإدارة الرعاية الصحية للمستشفيات والعيادات، يدمج السجلات الطبية للمرضى، جدولة المواعيد، الفواتير، وإمكانيات الطب عن بعد.
+                    </p>
+                    <div class="project-features">
+                        <h3 data-en="Key Features" data-ar="المميزات الرئيسية">المميزات الرئيسية</h3>
+                        <ul class="feature-list">
+                            <li data-en="Electronic Health Records (EHR)" data-ar="السجلات الصحية الإلكترونية">السجلات الصحية الإلكترونية</li>
+                            <li data-en="Appointment scheduling and management" data-ar="جدولة وإدارة المواعيد">جدولة وإدارة المواعيد</li>
+                            <li data-en="Telemedicine integration" data-ar="تكامل الطب عن بعد">تكامل الطب عن بعد</li>
+                            <li data-en="Billing and insurance processing" data-ar="الفواتير ومعالجة التأمين">الفواتير ومعالجة التأمين</li>
+                            <li data-en="Pharmacy inventory management" data-ar="إدارة مخزون الصيدلية">إدارة مخزون الصيدلية</li>
+                            <li data-en="HIPAA compliant security" data-ar="أمان متوافق مع معايير HIPAA">أمان متوافق مع معايير HIPAA</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <a href="images/healthcare/hc1.jpg" class="gallery-item">
+                        <img src="images/healthcare/hc1.jpg" alt="Healthcare Dashboard">
+                    </a>
+                    <a href="images/healthcare/hc2.jpg" class="gallery-item">
+                        <img src="images/healthcare/hc2.jpg" alt="Patient Records">
+                    </a>
+                    <a href="images/healthcare/hc3.jpg" class="gallery-item">
+                        <img src="images/healthcare/hc3.jpg" alt="Appointment Scheduling">
+                    </a>
+                    <a href="images/healthcare/hc4.jpg" class="gallery-item">
+                        <img src="images/healthcare/hc4.jpg" alt="Telemedicine Interface">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>-->
+                <!-- Projects CTA Section -->
+                <!--<section class="projects-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-en="Ready to start your project?" data-ar="هل أنت مستعد لبدء مشروعك؟">هل أنت مستعد لبدء مشروعك؟</h2>
+                <p data-en="Let's discuss how we can help bring your ideas to life with our expertise in AI and digital transformation."
+                   data-ar="دعونا نناقش كيف يمكننا مساعدتك في تحويل أفكارك إلى واقع باستخدام خبرتنا في الذكاء الاصطناعي والتحول الرقمي.">
+                    دعونا نناقش كيف يمكننا مساعدتك في تحويل أفكارك إلى واقع باستخدام خبرتنا في الذكاء الاصطناعي والتحول الرقمي.
+                </p>
+                <a href="#contact" class="btn btn-pulse" data-en="Get in Touch" data-ar="تواصل معنا">تواصل معنا</a>
+            </div>
+        </div>
+    </section>
+
+                    <section class="projects-cta contact-section-combined" id="contact">
+                        <div class="container">-->
+                <!-- CTA Content -->
+                <!--<div class="cta-content">
+        <h2 data-en="Have a project in mind?" data-ar="هل لديك مشروع في ذهنك؟">هل لديك مشروع في ذهنك؟</h2>
+        <p data-en="Let's discuss how we can turn your idea into a successful digital solution"
+           data-ar="لنتناقش حول كيفية تحويل فكرتك إلى حل رقمي ناجح">
+            لنتناقش حول كيفية تحويل فكرتك إلى حل رقمي ناجح
+        </p>
+    </div>-->
+                <!-- Contact Header -->
+                <!--<div class="section-header">
+        <h2 class="section-title" data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</h2>
+        <p class="section-subtitle" data-en="Get in touch with our team" data-ar="تواصل مع فريقنا">تواصل مع فريقنا</p>
+    </div>-->
+                <!-- Contact Content -->
+                <!--<div class="contact-content-horizontal">-->
+                <!-- Contact Info -->
+                <!--<div class="contact-info-horizontal">
+        <div class="info-row">
+            <div class="info-card-horizontal">
+                <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content">
+                    <h3 data-en="Our Address" data-ar="عنواننا">عنواننا</h3>
+                    <p data-en="123 Business Center, Riyadh, Saudi Arabia"
+                       data-ar="123 مركز الأعمال، الرياض، المملكة العربية السعودية">
+                        123 مركز الأعمال، الرياض، المملكة العربية السعودية
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-card-horizontal">
+                <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                    <h3 data-en="Email Us" data-ar="البريد الإلكتروني">البريد الإلكتروني</h3>
+                    <p>info@aexeron.com</p>
+                    <p>support@aexeron.com</p>
+                </div>
+            </div>
+        </div>-->
+                <!-- Social Media -->
+                <!--<div class="info-row social-media-row">
+                        <div class="social-media-card">
+                            <h3 data-en="Follow Us" data-ar="تابعنا">تابعنا</h3>
+                            <div class="social-links">
+                                <a href="https://linkedin.com/company/aexeron" target="_blank" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://facebook.com/aexeron" target="_blank" aria-label="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://twitter.com/aexeron" target="_blank" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="https://instagram.com/aexeron" target="_blank" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+                <footer>
+                    <div class="container">
+                        <div class="footer-content">
+                            <div class="footer-logo">
+                                <img src="images/logo.png" alt="Aexeron Logo" style="height: 50px;">
+                                <p data-en="Transforming businesses with smart digital solutions."
+                                   data-ar="نحول الأعمال بحلول رقمية ذكية.">
+                                    نحول الأعمال بحلول رقمية ذكية.
+                                </p>
+                            </div>
+                            <div class="footer-links">
+                                <h3 data-en="Quick Links" data-ar="روابط سريعة">روابط سريعة</h3>
+                                <ul>
+                                    <li><a href="#home" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+                                    <li><a href="#services" data-en="Services" data-ar="خدماتنا">خدماتنا</a></li>
+                                    <li><a href="#about" data-en="About" data-ar="من نحن">من نحن</a></li>
+                                    <li><a href="#projects" data-en="Projects" data-ar="مشاريعنا">مشاريعنا</a></li>
+                                    <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">اتصل بنا</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-contact">
+                                <h3 data-en="Contact Us" data-ar="اتصل بنا">اتصل بنا</h3>
+                                <ul>
+                                    <li><i class="fas fa-envelope"></i> info@aexeron.com</li>
+                                    <li><i class="fas fa-phone"></i> +970 1234566</li>
+                                    <li><i class="fas fa-map-marker-alt"></i> <span data-en="Ramallah, Palestine" data-ar="رام الله، فلسطين">رام الله، فلسطين</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <p data-en="&copy; 2025 Aexeron. All rights reserved."
+                               data-ar="&copy; 2025 Aexeron. جميع الحقوق محفوظة.">
+                                &copy; 2025 Aexeron. جميع الحقوق محفوظة.
+                            </p>
+                        </div>
+                    </div>
+                </footer>
+
+                <script>
+                    // Language Toggle Functionality
+                    document.getElementById('langSwitch').addEventListener('click', function () {
+                        const html = document.documentElement;
+                        const isRTL = html.getAttribute('dir') === 'rtl';
+                        const lang = isRTL ? 'en' : 'ar';
+
+                        // Switch direction
+                        html.setAttribute('dir', isRTL ? 'ltr' : 'rtl');
+                        html.setAttribute('lang', lang);
+
+                        // Update button text
+                        this.textContent = isRTL ? 'AR | العربية' : 'EN | English';
+
+                        // Update all translatable elements
+                        document.querySelectorAll('[data-en], [data-ar]').forEach(element => {
+                            const text = element.getAttribute(isRTL ? 'data-en' : 'data-ar');
+                            if (text) element.textContent = text;
+                        });
+                    });
+
+                    // Mobile Menu Toggle
+                    document.querySelector('.hamburger').addEventListener('click', function () {
+                        this.classList.toggle('active');
+                        document.querySelector('.nav-links').classList.toggle('active');
+                    });
+
+                    // Close mobile menu when clicking on a link
+                    document.querySelectorAll('.nav-links a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            document.querySelector('.hamburger').classList.remove('active');
+                            document.querySelector('.nav-links').classList.remove('active');
+                        });
+                    });
+
+                    // Services Tabs
+                    const tabBtns = document.querySelectorAll('.tab-btn');
+                    tabBtns.forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            // Remove active class from all buttons and content
+                            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+                            // Add active class to clicked button
+                            btn.classList.add('active');
+
+                            // Show corresponding content
+                            const tabId = btn.getAttribute('data-tab');
+                            document.getElementById(tabId).classList.add('active');
+                        });
+                    });
+
+                    // Smooth scrolling for anchor links
+                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            e.preventDefault();
+
+                            const targetId = this.getAttribute('href');
+                            if (targetId === '#') return;
+
+                            const targetElement = document.querySelector(targetId);
+                            if (targetElement) {
+                                window.scrollTo({
+                                    top: targetElement.offsetTop - 70,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        });
+                    });
+
+                    // Initialize lightGallery for project galleries
+
+                </script>
+            </body>
+        </html>
