@@ -1373,7 +1373,6 @@
                 </style>
             </head>
             <body>
-
                 <div class="loading-screen" id="loadingScreen">
                     <div class="loader">
                         <div class="loader-circle"></div>
@@ -2321,6 +2320,36 @@
                             }, 500); // Match this with the transition duration
                         }, 3000); // 3 seconds
                     });
+
+
+
+                    // Modern cross-browser event listener
+                    function onReady() {
+                        const loadingScreen = document.getElementById('loadingScreen');
+                        const pageContent = document.getElementById('pageContent');
+                        const progressBar = document.getElementById('progressBar');
+
+                        // Start the progress bar animation
+                        progressBar.style.width = '100%';
+
+                        // Hide loading screen and show content after 3 seconds
+                        setTimeout(function () {
+                            loadingScreen.classList.add('hidden');
+                            pageContent.classList.add('visible');
+
+                            // Remove loading screen from DOM after transition completes
+                            setTimeout(function () {
+                                loadingScreen.style.display = 'none';
+                            }, 500); // Match this with the transition duration
+                        }, 3000); // 3 seconds
+                    }
+
+                    // Cross-browser DOM ready check
+                    if (document.readyState !== 'loading') {
+                        onReady();
+                    } else {
+                        document.addEventListener('DOMContentLoaded', onReady);
+                    }
                 </script>
             </body>
         </html>

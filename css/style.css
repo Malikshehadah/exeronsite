@@ -1360,3 +1360,225 @@ body {
 h1 {
     color: #333;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Loading Animation Styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1B263B 0%, #3a7bd5 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease; /* Safari/Chrome */
+}
+
+    .loading-screen.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+.loader {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.loader-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 8px solid transparent;
+    border-top-color: #00d2ff;
+    border-radius: 50%;
+    box-sizing: border-box;
+    /* Animation with all vendor prefixes */
+    animation: spin 1.5s linear infinite;
+    -webkit-animation: spin 1.5s linear infinite; /* Safari/Chrome */
+    -moz-animation: spin 1.5s linear infinite; /* Firefox */
+    -ms-animation: spin 1.5s linear infinite; /* Edge */
+}
+
+    .loader-circle:nth-child(2) {
+        border-top-color: #ffffff;
+        width: 90%;
+        height: 90%;
+        top: 5%;
+        left: 5%;
+        animation: spin 2s linear infinite 0.2s;
+        -webkit-animation: spin 2s linear infinite 0.2s;
+        -moz-animation: spin 2s linear infinite 0.2s;
+        -ms-animation: spin 2s linear infinite 0.2s;
+    }
+
+    .loader-circle:nth-child(3) {
+        border-top-color: rgba(0, 210, 255, 0.5);
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        animation: spin 2.5s linear infinite 0.4s;
+        -webkit-animation: spin 2.5s linear infinite 0.4s;
+        -moz-animation: spin 2.5s linear infinite 0.4s;
+        -ms-animation: spin 2.5s linear infinite 0.4s;
+    }
+
+/* Keyframes with all vendor prefixes */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-ms-keyframes spin {
+    0% {
+        -ms-transform: rotate(0deg);
+    }
+
+    100% {
+        -ms-transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: center;
+    animation: pulse 1.5s ease-in-out infinite;
+    -webkit-animation: pulse 1.5s ease-in-out infinite;
+    -moz-animation: pulse 1.5s ease-in-out infinite;
+    -ms-animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes pulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes pulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes pulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.progress-bar {
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-top: 30px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00d2ff, #ffffff);
+    transition: width 3s linear;
+    -webkit-transition: width 3s linear;
+    -moz-transition: width 3s linear;
+    -ms-transition: width 3s linear;
+}
+
+/* Page Content - Hidden Initially */
+.page-content {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+}
+
+    .page-content.visible {
+        opacity: 1;
+    }
+
+/* Sample page content styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
